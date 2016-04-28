@@ -4,7 +4,7 @@ script "ContestfameCheck.ash"
 *	ContestFameCheck
 *
 *	Checks the fame or fame taken of each team and adds
-*	it out. Sorts output by the highest scoring teams.
+*	it up. Sorts output by the highest scoring teams.
 *
 *	Enter teams in "names" in the order:
 *	member1, member2, member3, manager
