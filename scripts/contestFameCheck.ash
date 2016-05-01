@@ -66,6 +66,7 @@ int fame(string player)
 
 void main()
 {
+	print("---------"); // Formating
 	foreach name in names
 	{
 		id = get_player_id(name).to_int();
