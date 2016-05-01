@@ -14,8 +14,8 @@ script "ContestfameCheck.ash"
 
 int [string] data;	// Map for ids to be stored in
 int id;				// Temporary placeholder
-boolean[string] names = $strings[Margaret Houlihan, Nik, Marge, Honus Carbuncle, CherryJ, Phantax, GinoXYZ, Xairon, Mister Mickey, efot, Spice Trader, Nickles, Krymzin, ElectricBolter, skimoo, Loathmast, LadyJ, Julitewn, Txranger, Rabbit House, asmithsgirl, Miguelius, Irresponsibility, jon diaz, Boesbert, Albert, laidak, Hugbert, tomkitty, Jizmak The Destroyer, scullyangel, eusst, Mystik Spiral, ChesterArthurXXI, CaptainUrsus, Shelldor, Gmorg, PandaPants, Sassy Staci, Dryhad, greycat, Aubra, BC_Goldman, PsyMar, Nienor, cowmanbob, Mana Yachanichu, Anchon];
-boolean[string] managers = $strings[Honus Carbuncle, Xairon, Nickles, Loathmast, Rabbit House, jon diaz, Hugbert, eusst, Shelldor, Dryhad, PsyMar, Anchon];
+boolean[string] names = $strings[Margaret Houlihan, Nik, Marge, Honus Carbuncle, CherryJ, Phantax, GinoXYZ, Xairon, Mister Mickey, efot, Spice Trader, Nickles, Krymzin, ElectricBolter, skimoo, Loathmast, LadyJ, Julitewn, Txranger, Rabbit House, asmithsgirl, Miguelius, Mr McGibblets, jon diaz, Boesbert, Albert, laidak, Hugbert, tomkitty, Jizmak The Destroyer, scullyangel, eusst, Mystik Spiral, ChesterArthurXXI, CaptainUrsus, Shelldor, Gmorg, PandaPants, Sassy Staci, Dryhad, greycat, Aubra, BC_Goldman, PsyMar, Nienor, cowmanbob, Mana Yachanichu, Anchon, Somersaulter, Grushvak, Auriron, Chink];
+boolean[string] managers = $strings[Honus Carbuncle, Xairon, Nickles, Loathmast, Rabbit House, jon diaz, Hugbert, eusst, Shelldor, Dryhad, PsyMar, Anchon, Chink];
 string[string] output;
 
 /*******************************************************
@@ -59,6 +59,8 @@ int fame(string player)
 	if (find(fameHC))
 		if (group(fameHC).to_int() > largesT)
 			largest = group(fameHC).to_int();
+	if (largest == 0)
+		print(player + " has a score of 0", "red");
 	return largest;
 }
 
