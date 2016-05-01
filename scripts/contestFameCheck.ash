@@ -66,7 +66,6 @@ int fame(string player)
 
 void main()
 {
-	print("---------"); // Formating
 	foreach name in names
 	{
 		id = get_player_id(name).to_int();
@@ -85,6 +84,7 @@ void main()
 		else
 			score += fame(name);
 	}
+	print("--------------------------","green"); // Formating
 	int largest; int times; string man;
 	while (times < count(managers))
 	{
@@ -97,7 +97,6 @@ void main()
 			}
 		}
 		print("Team " + man + ": " + output[man]);
-		remove output[man];
-		largest = 0; times+=1;
+		output[man] = -1; largest = -1; times+=1;
 	}
 }
