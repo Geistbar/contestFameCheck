@@ -35,6 +35,8 @@ int fameTaken(string player)
 		if (largest < group(fameTaken).to_int())
 			largest = group(fameTaken).to_int();
 	}
+	if (largest == 0)
+		print(player + " has a score of 0", "red");
 	return largest;
 }
 
